@@ -99,7 +99,7 @@ static int pY;
 		contentPane.add(button_1);
 		
 		JEditorPane editorPane = new JEditorPane();
-		editorPane.setBounds(0, 24, 220, 137);
+		editorPane.setBounds(0, 24, 220, 202);
 		editorPane.setBackground(null);
 		contentPane.add(editorPane);
 		
