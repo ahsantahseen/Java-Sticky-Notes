@@ -2,6 +2,7 @@ package notes;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Transparency;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -46,7 +47,7 @@ public class StickyNotes extends JFrame {
 		setBounds(100, 100, 190, 200);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EtchedBorder(EtchedBorder.RAISED, null, Color.GRAY));
-		contentPane.setBackground(new Color(255, 255, 224));
+		contentPane.setBackground(new Color(250, 240, 148));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
@@ -61,8 +62,7 @@ public class StickyNotes extends JFrame {
 			
 			}
 		});
-		btnNewButton.setBackground(null);
-
+		btnNewButton.setBackground(new Color(249,233,148));
 		btnNewButton.setBorder(null);
 		btnNewButton.setIcon(new ImageIcon(StickyNotes.class.getResource("/images/icons8-close-window-24.png")));
 		btnNewButton.setBounds(157, 2, 24, 24);
@@ -76,14 +76,14 @@ public class StickyNotes extends JFrame {
 		});
 		button.setIcon(new ImageIcon(StickyNotes.class.getResource("/images/icons8-trash-24.png")));
 		button.setBorder(null);
-		button.setBackground((Color) null);
+		button.setBackground(new Color(249,233,148));
 		button.setBounds(2, 2, 24, 24);
 		contentPane.add(button);
 		
 		JButton button_1 = new JButton("");
 		button_1.setIcon(new ImageIcon(StickyNotes.class.getResource("/images/icons8-plus-24.png")));
 		button_1.setBorder(null);
-		button_1.setBackground((Color) null);
+		button_1.setBackground(new Color(249,233,148));
 		button_1.setBounds(36, 2, 24, 24);
 		contentPane.add(button_1);
 		
