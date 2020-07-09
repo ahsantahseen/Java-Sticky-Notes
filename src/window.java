@@ -73,7 +73,7 @@ public class window extends JFrame {
 		panel.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		panel.setBounds(4, 40, 311, 129);
 		contentPane.add(panel);
-		panel.setLayout(null);
+		 panel.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(5, 5, 301, 118);
