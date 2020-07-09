@@ -80,6 +80,13 @@ public class StickyNotes extends JFrame {
 		button.setBounds(2, 2, 24, 24);
 		contentPane.add(button);
 		
+		JButton button_1 = new JButton("");
+		button_1.setIcon(new ImageIcon(StickyNotes.class.getResource("/images/icons8-plus-24.png")));
+		button_1.setBorder(null);
+		button_1.setBackground((Color) null);
+		button_1.setBounds(36, 2, 24, 24);
+		contentPane.add(button_1);
+		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(StickyNotes.class.getResource("/images/ezgif.com-webp-to-png (3).png")));
 		lblNewLabel.setBounds(-39,-31, 260, 280);
