@@ -68,23 +68,11 @@ public class StickyNotes extends JFrame {
 		btnNewButton.setBounds(157, 2, 24, 24);
 		contentPane.add(btnNewButton);
 		
-		JButton button = new JButton("");
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showConfirmDialog(getParent(), "Do you want to delete the note?");
-			}
-		});
-		button.setIcon(new ImageIcon(StickyNotes.class.getResource("/images/icons8-trash-24.png")));
-		button.setBorder(null);
-		button.setBackground(new Color(249,233,148));
-		button.setBounds(2, 2, 24, 24);
-		contentPane.add(button);
-		
 		JButton button_1 = new JButton("");
 		button_1.setIcon(new ImageIcon(StickyNotes.class.getResource("/images/icons8-plus-24.png")));
 		button_1.setBorder(null);
 		button_1.setBackground(new Color(249,233,148));
-		button_1.setBounds(36, 2, 24, 24);
+		button_1.setBounds(6, 2, 24, 24);
 		contentPane.add(button_1);
 		
 		JLabel lblNewLabel = new JLabel("");
