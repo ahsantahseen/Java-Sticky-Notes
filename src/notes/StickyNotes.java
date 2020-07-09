@@ -8,18 +8,29 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.*;
 import java.awt.Color;
+import java.awt.Component;
+
 import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.ComponentInputMap;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.border.BevelBorder;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
+import javax.swing.JEditorPane;
 
 public class StickyNotes extends JFrame {
-
+static int pX;
+static int pY;
 	private JPanel contentPane;
 
 	/**
@@ -32,6 +43,17 @@ public class StickyNotes extends JFrame {
 					StickyNotes frame = new StickyNotes();
 					frame.setUndecorated(true);
 					frame.setVisible(true);
+				
+					
+					frame.addMouseMotionListener(new MouseAdapter() {
+					   	public void mouseDragged(MouseEvent me) {
+					   		frame.getLocationOnScreen();
+					   		frame.setLocation(me.getXOnScreen(), me.getYOnScreen());
+		
+						 
+						
+						}
+					});
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -43,14 +65,15 @@ public class StickyNotes extends JFrame {
 	 * Create the frame.
 	 */
 	public StickyNotes() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 190, 200);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EtchedBorder(EtchedBorder.RAISED, null, Color.GRAY));
+		contentPane.setBorder(null);
 		contentPane.setBackground(new Color(250, 240, 148));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+	
 		
 		
 		JButton btnNewButton = new JButton("");
@@ -72,12 +95,15 @@ public class StickyNotes extends JFrame {
 		button_1.setIcon(new ImageIcon(StickyNotes.class.getResource("/images/icons8-plus-24.png")));
 		button_1.setBorder(null);
 		button_1.setBackground(new Color(249,233,148));
-		button_1.setBounds(6, 2, 24, 24);
+		button_1.setBounds(3, 2, 24, 24);
 		contentPane.add(button_1);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(StickyNotes.class.getResource("/images/ezgif.com-webp-to-png (3).png")));
-		lblNewLabel.setBounds(-39,-31, 260, 280);
-		contentPane.add(lblNewLabel);
+		JEditorPane editorPane = new JEditorPane();
+		editorPane.setBounds(0, 24, 220, 137);
+		editorPane.setBackground(null);
+		contentPane.add(editorPane);
+		
+	
+	
 	}
 }
