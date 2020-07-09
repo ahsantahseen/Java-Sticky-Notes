@@ -12,6 +12,7 @@ import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.border.BevelBorder;
@@ -49,6 +50,8 @@ public class StickyNotes extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
+		
 		JButton btnNewButton = new JButton("");
 		btnNewButton.setBorder(null);
 		btnNewButton.addActionListener(new ActionListener() {
@@ -62,8 +65,20 @@ public class StickyNotes extends JFrame {
 
 		btnNewButton.setBorder(null);
 		btnNewButton.setIcon(new ImageIcon(StickyNotes.class.getResource("/images/icons8-close-window-24.png")));
-		btnNewButton.setBounds(149, 3, 24, 24);
+		btnNewButton.setBounds(157, 2, 24, 24);
 		contentPane.add(btnNewButton);
+		
+		JButton button = new JButton("");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showConfirmDialog(getParent(), "Do you want to delete the note?");
+			}
+		});
+		button.setIcon(new ImageIcon(StickyNotes.class.getResource("/images/icons8-trash-24.png")));
+		button.setBorder(null);
+		button.setBackground((Color) null);
+		button.setBounds(2, 2, 24, 24);
+		contentPane.add(button);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(StickyNotes.class.getResource("/images/ezgif.com-webp-to-png (3).png")));
