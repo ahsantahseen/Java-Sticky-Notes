@@ -6,5 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Ahsan Tahseen/Downloads/swingx.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
